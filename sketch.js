@@ -133,11 +133,12 @@ function draw() {
   // tongue
   fill(255, 0, 0);
   beginShape();
-  vertex(ui.point * 2, -ui.point);
-  vertex(ui.point * 6, -ui.point);
-  vertex(ui.point * 5, 0);
-  vertex(ui.point * 6, ui.point);
-  vertex(ui.point * 2, ui.point);
+  let pt = ui.cellW / 8;
+  vertex(pt * 2, -pt);
+  vertex(pt * 6, -pt);
+  vertex(pt * 5, 0);
+  vertex(pt * 6, pt);
+  vertex(pt * 2, pt);
   endShape(CLOSE);
 
   // head
@@ -147,14 +148,14 @@ function draw() {
   // eyes
   fill(255);
   stroke(ui.snakeCol1);
-  strokeWeight(ui.point / 2);
-  ellipse(ui.point / 2, -ui.point * 1.5, ui.point * 3, ui.point * 3);
-  ellipse(ui.point / 2, ui.point * 1.5, ui.point * 3, ui.point * 3);
+  strokeWeight(pt / 2);
+  ellipse(pt / 2, -pt * 1.5, pt * 3, pt * 3);
+  ellipse(pt / 2, pt * 1.5, pt * 3, pt * 3);
 
   fill(0);
   noStroke();
-  ellipse(ui.point, -ui.point * 1.5, ui.point, ui.point);
-  ellipse(ui.point, ui.point * 1.5, ui.point, ui.point);
+  ellipse(pt, -pt * 1.5, pt, pt);
+  ellipse(pt, pt * 1.5, pt, pt);
 
   pop();
   pop();
